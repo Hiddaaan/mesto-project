@@ -1,17 +1,16 @@
-.cards__like {
+.card__like {
   padding: 0;
-  margin: 0;
-  min-width: 22px;
+  width: 22px;
   height: 19px;
   border: none;
   cursor: pointer;
-  background-color: #FFFFFF;
-  transition: .3s;
+  background-color: rgba(0,0,0,0);
   background-image: url(../../../images/like.svg);
   background-size: 100%;
   background-position: center;
+  transition: .3s;
 }
 
-.cards__like:hover {
+.card__like:hover {
   opacity: 0.5;
 }

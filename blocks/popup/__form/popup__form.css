@@ -1,12 +1,13 @@
 .popup__form {
-  position: relative;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  row-gap: 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .popup__form {
-    max-width: 238px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
+    margin-top: 75px;
+    row-gap: 30px;
   }
 }

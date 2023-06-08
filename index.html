@@ -10,87 +10,84 @@
   <meta name="author" content="hiddaaan">
   <link rel="stylesheet" href="./pages/index.css">
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  <title>Mesto</title>
+  <title>Место</title>
 </head>
 
 <body class="page">
 <div class="content">
   <header class="header">
-    <img src="./images/header__logo.svg" alt="Логотип" class="logo">
+    <img src="./images/header__logo.svg" alt="Логотип" class="header__logo">
   </header>
-
   <main class="main">
     <section class="profile">
-      <div class="profile__avatar">
-        <img class="profile__avatar-photo" src="./images/profile__avatar.jpg" alt="аватар">
-      </div>
+      <img class="profile__avatar-photo" src="./images/profile__avatar.jpg" alt="Аватар">
       <div class="profile__info">
         <h1 class="profile__name">Цирилла Фиона</h1>
-        <button class="profile__edit-button" type="button"></button>
+        <button class="profile__edit-button" type="button" aria-label="Изменить профиль"></button>
         <p class="profile__profession">Ведьмачка</p>
       </div>
-      <button class="profile__add-button" type="button"></button>
+      <button class="profile__add-button" type="button" aria-label="Добавить карточку"></button>
     </section>
-
-    <div class="cards">
-      <div class="card__item">
-        <img class="cards__image" src="./images/tussent.jpg" alt="Туссент, Ведьмак">
-        <div class="cards__caption">
-          <h2 class="cards__title">Туссент</h2>
-          <button class="cards__like cards__like_active" type="button"></button>
+    <section class="cards">
+      <article class="card">
+        <img class="card__image" src="./images/tussent.jpg" alt="Туссент, Ведьмак">
+        <div class="card__caption">
+          <h2 class="card__title">Туссент</h2>
+          <button class="card__like" type="button"></button>
         </div>
-      </div>
-      <div class="card__item">
-        <img class="cards__image" src="./images/skyrim.jpg" alt="Совнгард, Скайрим">
-        <div class="cards__caption">
-          <h2 class="cards__title">Совнгард</h2>
-          <button class="cards__like cards__like_active" type="button"></button>
+      </article>
+      <article class="card">
+        <img class="card__image" src="./images/skyrim.jpg" alt="Совнгард, Скайрим">
+        <div class="card__caption">
+          <h2 class="card__title">Совнгард</h2>
+          <button class="card__like" type="button"></button>
         </div>
-      </div>
-      <div class="card__item">
-        <img class="cards__image" src="./images/bioshock.jpg" alt="Колумбия, Биошок Инфинити">
-        <div class="cards__caption">
-          <h2 class="cards__title">Колумбия</h2>
-          <button class="cards__like cards__like_active" type="button"></button>
+      </article>
+      <article class="card">
+        <img class="card__image" src="./images/bioshock.jpg" alt="Колумбия, Биошок Инфинити">
+        <div class="card__caption">
+          <h2 class="card__title">Колумбия</h2>
+          <button class="card__like" type="button"></button>
         </div>
-      </div>
-      <div class="card__item">
-        <img class="cards__image" src="./images/los-santos.jpg" alt="Лос-Сантос, ГТА">
-        <div class="cards__caption">
-          <h2 class="cards__title">Лос-Сантос</h2>
-          <button class="cards__like cards__like_active" type="button"></button>
+      </article>
+      <article class="card">
+        <img class="card__image" src="./images/los-santos.jpg" alt="Лос-Сантос, ГТА">
+        <div class="card__caption">
+          <h2 class="card__title">Лос-Сантос</h2>
+          <button class="card__like" type="button"></button>
         </div>
-      </div>
-      <div class="card__item">
-        <img class="cards__image" src="./images/сhelomei.jpg" alt="Челомей, Атомик Харт">
-        <div class="cards__caption">
-          <h2 class="cards__title">Челомей</h2>
-          <button class="cards__like cards__like_active" type="button"></button>
+      </article>
+      <article class="card">
+        <img class="card__image" src="./images/сhelomei.jpg" alt="Челомей, Атомик Харт">
+        <div class="card__caption">
+          <h2 class="card__title">Челомей</h2>
+          <button class="card__like" type="button"></button>
         </div>
-      </div>
-      <div class="card__item">
-        <img class="cards__image" src="./images/city-17.jpg" alt="Сити-17, Халф Лайф">
-        <div class="cards__caption">
-          <h2 class="cards__title">Сити-17</h2>
-          <button class="cards__like cards__like_active" type="button"></button>
+      </article>
+      <article class="card">
+        <img class="card__image" src="./images/city-17.jpg" alt="Сити-17, Халф Лайф">
+        <div class="card__caption">
+          <h2 class="card__title">Сити-17</h2>
+          <button class="card__like" type="button"></button>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">© 2023 Mesto Russia</p>
   </footer>
 </div>
 
-<div class="popup popup_opened">
-  <div class="popup__container ">
+<div class="popup">
+  <div class="popup__container">
     <h2 class="popup__title">Редактировать профиль</h2>
     <form class="popup__form" name="popup__form" novalidate>
-      <input type="text" class="popup__input popup__profile-name" name="profilename" placeholder="Имя" id="popup__profile-name">
-      <input type="text" class="popup__input popup__profile-profession" name="profileprofession" placeholder="Профессиональная деятельность" id="popup__profile-profession">
+      <input type="text" class="popup__input" name="name" placeholder="Имя" id="name" required>
+      <input type="text" class="popup__input" name="profession" placeholder="Профессиональная деятельность"
+             id="profession" required>
       <button type="submit" class="popup__button-save">Сохранить</button>
     </form>
-    <button class="popup__button-close" type="button"><img class="popup__icon" src="./images/close-icon.svg" alt="Кнопка закрыть"></button>
+    <button class="popup__button-close" type="button"></button>
   </div>
 </div>
 </body>
