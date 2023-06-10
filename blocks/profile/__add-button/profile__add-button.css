@@ -6,12 +6,14 @@
   max-width: 150px;
   min-height: 50px;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid #FFFFFF;
   background-image: url(../../../images/add-button.svg);
   background-repeat: no-repeat;
   background-color: #000000;
   background-position: center;
+  background-size: 22px 22px;
   transition: .3s;
+  border-radius: 2px;
 }
 
 .profile__add-button:hover {
@@ -22,5 +24,6 @@
   .profile__add-button {
     margin: 36px 19px 0;
     max-width: none;
+    background-size: 16px 16px;
   }
 }
